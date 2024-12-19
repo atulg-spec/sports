@@ -1,0 +1,338 @@
+{% extends 'home/base.html' %}
+{% block title %}Esports BGMI Tournaments{% endblock title %}
+{% block body %}
+<!-- Hero Section -->
+<section class="relative h-screen bg-cover bg-center"
+    style="background-image: url('https://i.pinimg.com/originals/f2/38/e8/f238e8b339824587f493aca2d765a6ba.gif');">
+    <div class="absolute inset-0 bg-black opacity-10"></div>
+    <div class="relative  flex flex-col items-center justify-center text-center h-full px-6">
+        <h1
+            class="text-6xl sm:text-7xl font-extrabold leading-tight text-transparent bg-clip-text bg-gradient-to-br from-blue-800 via-purple-500 via-pink-500 to-blue-400 drop-shadow-2xl knewave-regular">
+            EPIC ESPORTS SHOWDOWN
+        </h1>
+        <p class="mt-4 text-2xl sm:text-xl max-w-2xl mx-auto text-gray-300 knewave-regular">
+            Join the ultimate gaming experience and rise to the top in competitive esports tournaments!
+        </p>
+        <div class="mt-8">
+            <a href="/register"
+                class="text-lg transition duration-200 knewave-regular sm:w-fit w-full px-3.5 py-2 bg-violet-400 hover:bg-violet-600 transition-all duration-700 ease-in-out rounded-lg shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] justify-center items-center flex hover:shadow-lg hover:scale-105">
+                <span class="px-1.5 text-gray-900 text-sm font-medium leading-6 whitespace-nowrap neon-text">Register
+                    Now
+                </span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="py-12 relative">
+    <div class="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
+
+        <div
+            class="w-full md:px-16 px-10 md:pt-16 pt-10 pb-10 bg-gray-950 rounded-2xl flex-col justify-end items-center lg:gap-28 md:gap-16 gap-10 inline-flex">
+            <div class="flex-col justify-end items-center lg:gap-16 gap-10 flex">
+                <div class="flex-col justify-center items-center gap-10 flex">
+                    <div class="flex-col justify-start items-center gap-2.5 flex">
+                        <h2
+                            class="text-center md:text-6xl text-5xl font-bold font-manrope leading-normal knewave-regular tracking-widest text-transparent bg-clip-text bg-gradient-to-br from-blue-800 via-purple-500 via-pink-500 to-blue-400 drop-shadow-2xl">
+                            BGMI</h2>
+                        <p class="text-center text-gray-500 text-base font-normal leading-relaxed">Just 5 days
+                            remaining until the big reveal of our next match!</p>
+                    </div>
+                    <div class="flex items-start justify-center w-full gap-2 count-down-main">
+                        <div class="timer flex flex-col gap-0.5">
+                            <div class="">
+                                <h3
+                                    class="countdown-element days text-center text-white text-2xl font-bold font-manrope leading-9">
+                                </h3>
+                            </div>
+                            <p class="text-center text-gray-500 text-xs font-normal leading-normal w-full">DAYS</p>
+                        </div>
+                        <h3 class="w-3 text-center text-gray-500 text-2xl font-medium font-manrope leading-9">:</h3>
+                        <div class="timer flex flex-col gap-0.5">
+                            <div class="">
+                                <h3
+                                    class="countdown-element hours text-center text-white text-2xl font-bold font-manrope leading-9">
+                                </h3>
+                            </div>
+                            <p class="text-center text-gray-500 text-xs font-normal leading-normal w-full">HRS</p>
+                        </div>
+                        <h3 class="w-3 text-center text-gray-500 text-2xl font-medium font-manrope leading-9">:</h3>
+                        <div class="timer flex flex-col gap-0.5">
+                            <div class="">
+                                <h3
+                                    class="countdown-element minutes text-center text-white text-2xl font-bold font-manrope leading-9">
+                                </h3>
+                            </div>
+                            <p class="text-center text-gray-500 text-xs font-normal leading-normal w-full">MINS</p>
+                        </div>
+                        <h3 class="w-3 text-center text-gray-500 text-2xl font-medium font-manrope leading-9">:</h3>
+                        <div class="timer flex flex-col gap-0.5">
+                            <div class="">
+                                <h3
+                                    class="countdown-element seconds text-center text-white text-2xl font-bold font-manrope leading-9">
+                                </h3>
+                            </div>
+                            <p class="text-center text-gray-500 text-xs font-normal leading-normal w-full">SECS</p>
+                        </div>
+                    </div>
+                    <div class="w-full flex-col justify-center items-center gap-5 flex">
+                        <h6
+                            class="text-center text-base font-semibold leading-relaxed text-transparent bg-clip-text bg-gradient-to-br from-blue-800 via-purple-500 via-pink-500 to-blue-400 drop-shadow-2xl">
+                            Match Date: December 25, 2024</h6>
+                        <div class="justify-center items-center gap-2.5 flex sm:flex-row flex-col">
+                            <a href="/register"
+                                class="text-lg transition duration-200 knewave-regular sm:w-fit w-full px-3.5 py-2 bg-violet-400 hover:bg-violet-600 transition-all duration-700 ease-in-out rounded-lg shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] justify-center items-center flex hover:shadow-lg hover:scale-105">
+                                <span
+                                    class="px-1.5 text-gray-900 text-sm font-medium leading-6 whitespace-nowrap neon-text">Register
+                                    Now
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="mt-12">
+    <!-- Title Section -->
+    <div class="relative isolate px-6 pt-2 lg:px-8">
+        <div class="absolute inset-x-0 -top-40 z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+            aria-hidden="true">
+            <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+                style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+            </div>
+        </div>
+        <div class="text-center">
+            <h1
+                class="text-3xl sm:text-4xl lg:text-6xl font-extrabold leading-tight drop-shadow-2xl text-white knewave-regular tracking-wider">
+                ESPORTS SHOWDOWN
+            </h1>
+        </div>
+        <!-- Game Cards Section -->
+        <div class="flex flex-col lg:flex-row justify-center items-center gap-8 lg:gap-12 px-4 py-10 mx-auto max-w-7xl">
+            <!-- BGMI Card -->
+            <div class="relative w-full sm:w-2/3 md:w-1/2 lg:w-1/3 h-64 sm:h-80 lg:h-96 bg-cover bg-no-repeat bg-center rounded-lg shadow-lg overflow-hidden"
+                style="background-image: url('https://staticg.sportskeeda.com/editor/2021/06/b400a-16226420458969.png');">
+            </div>
+            <!-- Free Fire Card -->
+            <div class="relative w-full sm:w-2/3 md:w-1/2 lg:w-1/3 h-64 sm:h-80 lg:h-96 bg-cover bg-no-repeat bg-center rounded-lg shadow-lg overflow-hidden"
+                style="background-image: url('https://m.media-amazon.com/images/M/MV5BMTI3MTE3ZGQtNWJmMi00MTAzLWI2MzYtZTFiMDRkMzU0ZjE0XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg');">
+            </div>
+            <!-- Valorant Card -->
+            <div class="relative w-full sm:w-2/3 md:w-1/2 lg:w-1/3 h-64 sm:h-80 lg:h-96 bg-cover bg-no-repeat bg-center rounded-lg shadow-lg overflow-hidden"
+                style="background-image: url('https://assets.xboxservices.com/assets/36/b5/36b52fa8-e71b-4435-888a-cecb98d3876a.jpg?n=153142244433_GLP-Page-Hero-0_1083x1222_02.jpg');">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="" class="mt-8">
+    <div class="relative isolate md:px-6 pt-2 lg:px-8">
+        <div class="text-center">
+            <h1
+                class="text-4xl sm:text-6xl font-extrabold leading-tight drop-shadow-2xl text-white knewave-regular tracking-widest">
+                TOURNAMENTS
+            </h1>
+        </div>
+        <br><br>
+        <div class="w-full px-4 md:px-12">
+            <div class="flex bg-gray-800 rounded-lg mb-6 overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                <!-- Tournament Info -->
+                <div class="flex-1 p-6 text-white">
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 class="text-xl font-bold knewave-regular tracking-widest text-transparent bg-clip-text bg-gradient-to-br from-blue-700 via-purple-400 via-pink-400 to-blue-300">
+                            BGMI TOURNAMENT
+                        </h2>
+                        <span class="inline-block px-3 py-1 text-xs font-medium bg-violet-400 text-white rounded-full uppercase">
+                            Solo
+                        </span>
+                    </div>
+                    <ul class="text-sm text-gray-300 space-y-2">
+                        <li>Registration: <strong>15 Dec 2024 - 24 Dec 2024</strong></li>
+                        <li>Tournament Date: <strong>25 Dec 2024 (Wednesday)</strong></li>
+                        <li>First Prize: <strong>₹10,000</strong></li>
+                    </ul>
+                    <!-- Book Slot Button -->
+                    <div class="mt-6">
+                        <a href="/register" class="block text-center text-lg transition duration-200 knewave-regular sm:w-fit w-full px-4 py-2 bg-violet-400 hover:bg-violet-600 rounded-lg shadow-md hover:shadow-lg hover:scale-105">
+                            <span class="text-gray-900 text-sm font-medium leading-6 whitespace-nowrap">Book a Slot</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="relative flex flex-col items-center justify-center text-center h-full px-6 mt-10">
+    <p class="mt-4 text-2xl sm:text-xl max-w-2xl mx-auto text-gray-300 knewave-regular">
+        Join the ultimate gaming experience and rise to the top in competitive esports tournaments!
+    </p>
+    <div class="mt-8">
+        <a href="/register"
+            class="text-lg transition duration-200 knewave-regular sm:w-fit w-full px-3.5 py-2 bg-violet-400 hover:bg-violet-600 transition-all duration-700 ease-in-out rounded-lg shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] justify-center items-center flex hover:shadow-lg hover:scale-105">
+            <span class="px-1.5 text-gray-900 text-sm font-medium leading-6 whitespace-nowrap neon-text">Register
+                Now
+            </span>
+        </a>
+    </div>
+</div>
+
+<section class="py-24 bg-gray-950 mt-4">
+    <div class="relative isolate md:px-6 pt-2 lg:px-8">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div
+                class="flex flex-col justify-center items-center gap-x-16 gap-y-5 xl:gap-28 lg:flex-row lg:justify-between mx-auto max-w-full">
+                <div class="w-full">
+                    <div class="">
+                        <div class="mb-6 lg:mb-16">
+                            <h6 class="text-lg text-center font-medium text-neon-400 mb-2 lg:text-left tracking-widest">
+                                FAQ</h6>
+                            <h2
+                                class="text-4xl text-center font-bold text-white leading-[3.25rem] mb-5 lg:text-left tracking-wider">
+                                Looking for answers?</h2>
+                        </div>
+                        <div class="accordion-group">
+                            <!-- FAQ Item 1 -->
+                            <div class="accordion pb-8 border-b border-solid border-gray-600">
+                                <button
+                                    class="accordion-toggle group inline-flex items-center justify-between text-xl font-normal leading-8 text-gray-300 w-full transition duration-500 hover:text-neon-400">
+                                    <h5>How to create an account?</h5>
+                                    <svg class="text-white transition duration-500 group-hover:text-neon-400" width="22"
+                                        height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M16.5 8.25L12.4142 12.3358C11.7475 13.0025 11.4142 13.3358 11 13.3358C10.5858 13.3358 10.2525 13.0025 9.58579 12.3358L5.5 8.25"
+                                            stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                                            stroke-linejoin="round"></path>
+                                    </svg>
+                                </button>
+                                <div
+                                    class="accordion-content w-full overflow-hidden px-4 max-h-0 transition-all duration-300">
+                                    <p class="text-base font-normal text-gray-300">
+                                        To create an account, find the 'Sign up' or 'Create account' button, fill
+                                        out the registration form with your personal information, and click 'Create
+                                        account' or 'Sign up.' Verify your email address if needed, and then log in
+                                        to start using the platform.
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- FAQ Item 2 -->
+                            <div class="accordion py-8 border-b border-solid border-gray-600">
+                                <button
+                                    class="accordion-toggle group inline-flex items-center justify-between font-normal text-xl leading-8 text-gray-300 w-full transition duration-500 hover:text-neon-400">
+                                    <h5>Have any trust issue?</h5>
+                                    <svg class="text-white transition duration-500 group-hover:text-neon-400" width="22"
+                                        height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M16.5 8.25L12.4142 12.3358C11.7475 13.0025 11.4142 13.3358 11 13.3358C10.5858 13.3358 10.2525 13.0025 9.58579 12.3358L5.5 8.25"
+                                            stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                                            stroke-linejoin="round"></path>
+                                    </svg>
+                                </button>
+                                <div
+                                    class="accordion-content w-full overflow-hidden px-4 max-h-0 transition-all duration-300">
+                                    <p class="text-base text-gray-500 font-normal">
+                                        Our focus on providing robust and user-friendly content management
+                                        capabilities ensures that you can manage your content with confidence, and
+                                        achieve your content marketing goals with ease.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    // count-down timer
+    let dest = new Date("dec 25, 2024 15:00:00").getTime();
+    let x = setInterval(function () {
+        let now = new Date().getTime();
+        let diff = dest - now;
+        // Check if the countdown has reached zero or negative
+        if (diff <= 0) {
+            // Set the destination date to the same day next month
+            let nextMonthDate = new Date();
+            nextMonthDate.setMonth(nextMonthDate.getMonth() + 1);
+
+            // If the current month is December, set the destination date to the same day next year
+            if (nextMonthDate.getMonth() === 0) {
+                nextMonthDate.setFullYear(nextMonthDate.getFullYear() + 1);
+            }
+
+            dest = nextMonthDate.getTime();
+            return; // Exit the function
+        }
+
+        let days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        let seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+        if (days < 10) {
+            days = `0${days}`;
+        }
+
+        if (hours < 10) {
+            hours = `0${hours}`;
+        }
+        if (minutes < 10) {
+            minutes = `0${minutes}`;
+        }
+        if (seconds < 10) {
+            seconds = `0${seconds}`;
+        }
+
+        // Get elements by class name
+        let countdownElements = document.getElementsByClassName("countdown-element");
+
+        // Loop through the elements and update their content
+        for (let i = 0; i < countdownElements.length; i++) {
+            let className = countdownElements[i].classList[1]; // Get the second class name
+            switch (className) {
+                case "days":
+                    countdownElements[i].innerHTML = days;
+                    break;
+                case "hours":
+                    countdownElements[i].innerHTML = hours;
+                    break;
+                case "minutes":
+                    countdownElements[i].innerHTML = minutes;
+                    break;
+                case "seconds":
+                    countdownElements[i].innerHTML = seconds;
+                    break;
+                default:
+                    break;
+            }
+        }
+    }, 10);
+
+    // FAQ SECTION
+    document.addEventListener('DOMContentLoaded', function () {
+        // Select all the accordion toggle buttons
+        const accordionToggles = document.querySelectorAll('.accordion-toggle');
+
+        // Add event listeners to each toggle button
+        accordionToggles.forEach(toggle => {
+            toggle.addEventListener('click', function () {
+                const accordionContent = this.nextElementSibling; // The content to show or hide
+                const icon = this.querySelector('svg'); // The icon to rotate
+
+                // Toggle the "active" class to expand or collapse
+                accordionContent.classList.toggle('max-h-0');
+                accordionContent.classList.toggle('max-h-[1000px]'); // Replace this with a suitable max-height value for smooth transition
+
+                // Rotate the icon
+                icon.classList.toggle('rotate-180');
+            });
+        });
+    });
+</script>
+
+{% endblock body %}
