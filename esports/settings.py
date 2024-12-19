@@ -119,8 +119,8 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '715982619092-bvatv5mfq7dros3h67dstgt0r5o25mpi.apps.googleusercontent.com'
-SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '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'
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '336711134690-cv9cld6rh9eq2bd6fe0c1md9j6fkm46l.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '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'
 
 
 LOGIN_REDIRECT_URL = "/"

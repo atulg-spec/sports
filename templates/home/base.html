@@ -6,13 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Esports BGMI Tournaments{% endblock title %}</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="https://i.ibb.co/0YmyS4Q/Screenshot-2024-12-19-200320-enhanced.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Knewave&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/feather-icons"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-37W78BBNJE"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-37W78BBNJE');
+    </script>
 </head>
 <style>
-    
     .knewave-regular {
         font-family: "Knewave", system-ui;
         font-weight: 400;
@@ -55,7 +64,8 @@
             <div class="hidden md:flex space-x-6">
                 <a href="/" class="text-lg text-violet-400 transition duration-200 knewave-regular">Home</a>
                 <a href="/aboutus/" class="text-lg text-violet-400 transition duration-200 knewave-regular">About</a>
-                <a href="/tournaments/" class="text-lg text-violet-400 transition duration-200 knewave-regular">Tournaments</a>
+                <a href="/tournaments/"
+                    class="text-lg text-violet-400 transition duration-200 knewave-regular">Tournaments</a>
                 <a href="/games/" class="text-lg text-violet-400 transition duration-200 knewave-regular">Games</a>
                 <a href="/register"
                     class="text-lg transition duration-200 knewave-regular sm:w-fit w-full px-3.5 py-2 bg-violet-400 hover:bg-violet-600 transition-all duration-700 ease-in-out rounded-lg shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] justify-center items-center flex hover:shadow-lg hover:scale-105">
@@ -87,14 +97,16 @@
                     </a>
                 </li>
                 <li>
-                    <a href="/tournaments" class="flex items-center p-2 text-white rounded-lg hover:bg-purple-500 group">
+                    <a href="/tournaments"
+                        class="flex items-center p-2 text-white rounded-lg hover:bg-purple-500 group">
                         <i data-feather="codesandbox" class="feather-icon text-green-500"></i> <!-- Add color here -->
                         <span class="ms-3">Tournaments</span>
                     </a>
                 </li>
                 <!-- Performance -->
                 <li>
-                    <a href="/achievements" class="flex items-center p-2 text-white rounded-lg hover:bg-purple-500 group">
+                    <a href="/achievements"
+                        class="flex items-center p-2 text-white rounded-lg hover:bg-purple-500 group">
                         <i data-feather="award" class="feather-icon text-yellow-500"></i> <!-- Add color here -->
                         <span class="ms-3">Achievements</span>
                     </a>
@@ -122,14 +134,16 @@
                 </li>
                 <!-- Privacy Policy -->
                 <li>
-                    <a href="/privacypolicy" class="flex items-center p-2 text-white rounded-lg hover:bg-purple-500 group">
+                    <a href="/privacypolicy"
+                        class="flex items-center p-2 text-white rounded-lg hover:bg-purple-500 group">
                         <i data-feather="shield" class="feather-icon text-teal-500"></i> <!-- Add color here -->
                         <span class="ms-3">Privacy Policy</span>
                     </a>
                 </li>
                 <!-- Terms of Service -->
                 <li>
-                    <a href="/termsofservice" class="flex items-center p-2 text-white rounded-lg hover:bg-purple-500 group">
+                    <a href="/termsofservice"
+                        class="flex items-center p-2 text-white rounded-lg hover:bg-purple-500 group">
                         <i data-feather="file-text" class="feather-icon text-orange-500"></i> <!-- Add color here -->
                         <span class="ms-3">Terms of Service</span>
                     </a>
@@ -256,9 +270,12 @@
                         <h3 class="text-white font-semibold mb-2">Quick Links</h3>
                         <ul>
                             <li><a href="/" class="hover:text-purple-400 transition duration-300">Home</a></li>
-                            <li><a href="/tournaments" class="hover:text-purple-400 transition duration-300">Tournaments</a></li>
-                            <li><a href="/aboutus" class="hover:text-purple-400 transition duration-300">About Us</a></li>
-                            <li><a href="/contactus" class="hover:text-purple-400 transition duration-300">Contact</a></li>
+                            <li><a href="/tournaments"
+                                    class="hover:text-purple-400 transition duration-300">Tournaments</a></li>
+                            <li><a href="/aboutus" class="hover:text-purple-400 transition duration-300">About Us</a>
+                            </li>
+                            <li><a href="/contactus" class="hover:text-purple-400 transition duration-300">Contact</a>
+                            </li>
                         </ul>
                     </div>
                     <div>
@@ -266,18 +283,23 @@
                         <ul>
                             <li><a href="/aboutus" class="hover:text-purple-400 transition duration-300">FAQs</a></li>
                             <li><a href="/rules" class="hover:text-purple-400 transition duration-300">Rules</a></li>
-                            <li><a href="/register" class="hover:text-purple-400 transition duration-300">Join Us</a></li>
-                            <li><a href="/contactus" class="hover:text-purple-400 transition duration-300">Help Center</a></li>
+                            <li><a href="/register" class="hover:text-purple-400 transition duration-300">Join Us</a>
+                            </li>
+                            <li><a href="/contactus" class="hover:text-purple-400 transition duration-300">Help
+                                    Center</a></li>
                         </ul>
                     </div>
                     <div>
                         <h3 class="text-white font-semibold mb-2">Legal</h3>
                         <ul>
-                            <li><a href="/privacypolicy" class="hover:text-purple-400 transition duration-300">Privacy Policy</a>
+                            <li><a href="/privacypolicy" class="hover:text-purple-400 transition duration-300">Privacy
+                                    Policy</a>
                             </li>
-                            <li><a href="/termsofservice" class="hover:text-purple-400 transition duration-300">Terms of Service</a>
+                            <li><a href="/termsofservice" class="hover:text-purple-400 transition duration-300">Terms of
+                                    Service</a>
                             </li>
-                            <li><a href="/refundpolicy" class="hover:text-purple-400 transition duration-300">Refund Policy</a>
+                            <li><a href="/refundpolicy" class="hover:text-purple-400 transition duration-300">Refund
+                                    Policy</a>
                             </li>
                         </ul>
                     </div>
