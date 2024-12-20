@@ -211,6 +211,45 @@
     {% endif %}
 
 
+    {% if user.is_authenticated %}
+    {% if user.phone_number %}
+    {% else %}
+    <div class="grid lg:grid-cols-9 gap-4" style="z-index: 1000;">
+        <div id="phoneNumberModal" class="fixed z-50 rounded-lg inset-0 flex items-center justify-center"
+            style="left: 50%;top: 50%;transform: translate(-50%, -50%);min-width: 350px; max-width: 500px; min-height: 700px;">
+            <div class="bg-gray-900 rounded-lg shadow-lg w-full py-6 px-10">
+                <form id="phoneNumberForm" method="post" action="/add-phone-number" onsubmit="return validatenumber()">
+                    {% csrf_token %}
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <label class="text-lg text-gray-200 font-semibold mb-2">Phone Number</label>
+                        </div>
+                    </div>
+                    <div class="text-gray-200 my-4">
+                        <div class="mb-3 mt-2">
+                            <label for="phone_number" class="inline-block mb-1 text-gray-200">Please Enter Phone
+                                Number</label>
+                            <input type="tel" id="phone_number"
+                                class="text-gray-900 rounded-lg focus:ring-gray-600 focus:border-gray-600 block w-full p-2 px-3 disabled:opacity-50 disabled:pointer-events-none"
+                                name="phone_number" placeholder="0000000000" value="" required="" />
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 gap-2 mt-2 md:grid-cols-2">
+                        <div class="flex flex-col">
+                            <button class="bg-violet-400 text-white py-2 rounded-lg hover:bg-violet-500"
+                                type="submit">Continue</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    {% endif %}
+
+
+
+
     <!-- Fixed Footer -->
     <!-- <footer class="fixed bottom-0 left-0 w-full bg-black bg-opacity-90 py-3 hidden md:block">
         <div class="flex flex-col md:flex-row justify-between items-center px-4 md:px-6">
@@ -307,7 +346,8 @@
                     <div>
                         <h3 class="text-white font-semibold mb-2">Follow Us</h3>
                         <ul>
-                            <li><a href="https://www.instagram.com/playesports.in/" class="hover:text-purple-400 transition duration-300">Instagram</a></li>
+                            <li><a href="https://www.instagram.com/playesports.in/"
+                                    class="hover:text-purple-400 transition duration-300">Instagram</a></li>
                         </ul>
                     </div>
                 </div>
@@ -324,6 +364,22 @@
         feather.replace();
     </script>
     <script>
+        function validatenumber() {
+            var phoneNumber = document.getElementById('phone_number').value;
+
+            // Regex to check if the phone number is 10 digits long
+            var phoneRegex = /^[0-9]{10}$/;
+
+            // Check if the number matches the regex
+            if (!phoneRegex.test(phoneNumber)) {
+                alert("Please enter a valid 10-digit mobile number.");
+                return false;  // Prevent form submission if validation fails
+            }
+
+            // If validation passes, submit the form
+            document.getElementById('phoneNumberForm').submit();
+        }
+
         document.addEventListener('DOMContentLoaded', function () {
             // Fetch the user's IP address using ipify
             fetch('https://api64.ipify.org?format=json')

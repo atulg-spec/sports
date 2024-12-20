@@ -4,6 +4,7 @@ urlpatterns = [
     path('', home, name='home'),
     path('register/', register, name='register'),
     path('tournaments/', tournaments, name='tournaments'),
+    path('add-phone-number', add_phone_number, name='add-phone-number'),
     path('profile/', profile, name='profile'),
     path('games/', games, name='games'),
     path('rules/', rules, name='rules'),

@@ -36,6 +36,25 @@ def profile(request):
     context = {'form':form, 'team':team}
     return render(request,'home/profile.html', context)
 
+
+@login_required
+def add_phone_number(request):
+    if request.method == 'POST':
+        print('post')
+        form = PhoneNumberForm(request.POST)
+        if form.is_valid():
+            phone_number = form.cleaned_data['phone_number']
+            request.user.phone_number = phone_number
+            request.user.save()
+            messages.success(request, "Phone number added successfully!")
+            return redirect('/register')  # Redirect to the profile or appropriate page
+        else:
+            messages.error(request, "Please enter a valid 10-digit phone number.")
+            return redirect('/register')  # Redirect to the profile or appropriate page
+    else:
+        return redirect('/register')
+
+
 @login_required
 def tournaments(request):
     return redirect('/register')
