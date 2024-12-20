@@ -76,7 +76,7 @@ def games(request):
 def payment_view(request):
     key = "6d125189-6290-4f37-bac8-5b7cafa0d353"
     client_txn_id = str(random.randint(100000, 999999))
-    amount = '1'
+    amount = '500'
     customer_name = request.user.first_name
     customer_email = request.user.email
     customer_mobile = f'{request.user.phone_number}'
