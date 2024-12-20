@@ -217,7 +217,7 @@
     <div class="grid lg:grid-cols-9 gap-4" style="z-index: 1000;">
         <div id="phoneNumberModal" class="fixed z-50 rounded-lg inset-0 flex items-center justify-center"
             style="left: 50%;top: 50%;transform: translate(-50%, -50%);min-width: 350px; max-width: 500px; min-height: 700px;">
-            <div class="bg-gray-900 rounded-lg shadow-lg w-full py-6 px-10">
+            <div class="bg-gray-900 rounded-lg shadow-lg w-full py-6 px-7">
                 <form id="phoneNumberForm" method="post" action="/add-phone-number" onsubmit="return validatenumber()">
                     {% csrf_token %}
                     <div class="flex justify-between items-center">
@@ -230,7 +230,7 @@
                             <label for="phone_number" class="inline-block mb-1 text-gray-200">Please Enter Phone
                                 Number</label>
                             <input type="tel" id="phone_number"
-                                class="text-gray-900 rounded-lg focus:ring-gray-600 focus:border-gray-600 block w-full p-2 px-3 disabled:opacity-50 disabled:pointer-events-none"
+                                class="bg-gray-800 text-black rounded-lg focus:ring-gray-600 focus:border-gray-600 block w-full p-2 px-3 disabled:opacity-50 disabled:pointer-events-none"
                                 name="phone_number" placeholder="0000000000" value="" required="" />
                         </div>
                     </div>
