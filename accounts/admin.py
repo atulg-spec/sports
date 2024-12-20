@@ -14,7 +14,7 @@ class CustomUserChangeForm(UserChangeForm):
 @admin.register(CustomUser)
 class CustomUserAdmin(UserAdmin):
     model = CustomUser
-    list_display = ('username', 'phone_number', 'email', 'is_staff', 'is_active', 'date_joined')
+    list_display = ('username', 'phone_number', 'first_name','email', 'is_staff', 'is_active', 'date_joined')
     list_filter = ('is_staff', 'is_active', 'city', 'region_name')
     search_fields = ('username', 'phone_number', 'email')
     ordering = ('-date_joined',)
@@ -22,7 +22,7 @@ class CustomUserAdmin(UserAdmin):
 
     fieldsets = (
         (None, {'fields': ('username', 'email', 'phone_number', 'password')}),
-        (('Personal Info'), {'fields': ('region_name', 'city', 'zip_code', 'lat', 'lon', 'timezone', 'isp')}),
+        (('Personal Info'), {'fields': ('first_name', 'last_name', 'region_name', 'city', 'zip_code', 'lat', 'lon', 'timezone', 'isp')}),
         (('Permissions'), {'fields': ('is_active', 'is_staff', 'is_superuser', 'groups', 'user_permissions')}),
         (('Important Dates'), {'fields': ('last_login', 'date_joined')}),  # Add read-only fields here
     )
