@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'social_django',
     'accounts',
     'home',
+    'game',
 ]
 AUTH_USER_MODEL = 'accounts.CustomUser'
 

@@ -2,12 +2,10 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Esports BGMI Tournaments{% endblock title %}</title>
+    {% block meta %}
+    {% endblock meta %}
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" href="/static/images/playesports.png" type="image/png">
-    <meta name="theme-color" content="#000000">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Knewave&display=swap" rel="stylesheet">
@@ -56,7 +54,7 @@
     <!-- Navbar -->
     <nav class="fixed w-full top-0 left-0 z-20 backdrop-blur-lg bg-black bg-opacity-60">
         <div class="max-w-screen-xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="/" class="text-2xl knewave-regular">PLAYESPORTS</a>
+            <a href="/game" class="text-2xl text-white knewave-regular">PLAYESPORTS</a>
 
             <div class="md:hidden">
                 <i data-feather="menu" class="feather-icon text-white"
@@ -246,34 +244,6 @@
     {% endif %}
     {% endif %}
 
-
-
-
-    <!-- Fixed Footer -->
-    <!-- <footer class="fixed bottom-0 left-0 w-full bg-black bg-opacity-90 py-3 hidden md:block">
-        <div class="flex flex-col md:flex-row justify-between items-center px-4 md:px-6">
-            <div class="md:w-1/4">
-                <p class="text-white text-sm mb-2 md:mb-0">We are trusted by:</p>
-            </div>
-
-            <div class="marquee overflow-hidden w-full md:w-9/12">
-                <div class="marquee-content space-x-8 flex items-center">
-                    <img src="https://via.placeholder.com/80x40" alt="Red Bull" class="h-6 md:h-8">
-                    <img src="https://via.placeholder.com/80x40" alt="AMD" class="h-6 md:h-8">
-                    <img src="https://via.placeholder.com/80x40" alt="Logitech" class="h-6 md:h-8">
-                    <img src="https://via.placeholder.com/80x40" alt="Intel" class="h-6 md:h-8">
-                    <img src="https://via.placeholder.com/80x40" alt="NVIDIA" class="h-6 md:h-8">
-                </div>
-            </div>
-            <div class="w-full flex justify-end">
-                <button class="mt-2 md:mt-0 bg-white text-black px-3 py-2 text-sm md:text-base rounded-lg font-semibold w-full md:w-1/4 
-                       hover:bg-black hover:text-white transition duration-300 ease-in-out">
-                    Become our client
-                </button>
-            </div>
-        </div>
-    </footer> -->
-
     <footer class="bg-black text-white py-10">
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex flex-col sm:flex-row justify-between items-center">
@@ -358,76 +328,9 @@
             </div>
         </div>
     </footer>
-    {% csrf_token %}
     <script>
         feather.replace();
     </script>
-    <script>
-        function validatenumber() {
-            var phoneNumber = document.getElementById('phone_number').value;
-
-            // Regex to check if the phone number is 10 digits long
-            var phoneRegex = /^[0-9]{10}$/;
-
-            // Check if the number matches the regex
-            if (!phoneRegex.test(phoneNumber)) {
-                alert("Please enter a valid 10-digit mobile number.");
-                return false;  // Prevent form submission if validation fails
-            }
-
-            // If validation passes, submit the form
-            document.getElementById('phoneNumberForm').submit();
-        }
-
-        document.addEventListener('DOMContentLoaded', function () {
-            // Fetch the user's IP address using ipify
-            fetch('https://api64.ipify.org?format=json')
-                .then(response => response.json())
-                .then(ipData => {
-                    const ip = ipData.ip;
-                    console.log('User IP:', ip);
-
-                    // Fetch the location data based on the user's IP using ipwhois
-                    fetch(`https://ipwhois.app/json/${ip}`)
-                        .then(response => response.json())
-                        .then(locationData => {
-                            const region = locationData.region;
-                            const city = locationData.city;
-                            const country = locationData.country;
-                            const lat = locationData.latitude;
-                            const lon = locationData.longitude;
-                            const timezone = locationData.timezone;
-                            const isp = locationData.isp;
-
-                            // Send the data to Django backend via AJAX to update the user model
-                            fetch('/update-user-location/', {
-                                method: 'POST',
-                                headers: {
-                                    'Content-Type': 'application/json',
-                                    'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value,
-                                },
-                                body: JSON.stringify({
-                                    region_name: region,
-                                    city: city,
-                                    zip_code: country,  // Use country as zip code, you can adjust this logic
-                                    lat: lat,
-                                    lon: lon,
-                                    timezone: timezone,
-                                    isp: isp,
-                                }),
-                            })
-                                .then(response => response.json())
-                                .then(data => {
-                                    console.log('User data updated:', data);
-                                })
-                                .catch(error => console.error('Error updating user data:', error));
-                        })
-                        .catch(error => console.error('Error fetching location info:', error));
-                })
-                .catch(error => console.error('Error fetching IP info:', error));
-        });
-    </script>
-
 </body>
 
 </html>

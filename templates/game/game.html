@@ -1,0 +1,85 @@
+{% extends 'game/base.html' %}
+{% block meta %}
+<meta charset="UTF-8">
+<meta name="theme-color" content="#000000">
+<meta name="robots" content="index, follow">
+<meta name="author" content="playesports.in">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta name="twitter:title" content="">
+<meta name="twitter:description" content="">
+<meta name="description"
+    content="Play free online games on our site, featuring a wide variety of action, adventure, puzzle, and strategy games. Enjoy hours of entertainment with new games added regularly.">
+<meta name="keywords"
+    content="free online games, action games, puzzle games, adventure games, strategy games, play games online">
+<meta property="og:title" content="Free Online Games - Play Now">
+<meta property="og:description"
+    content="Discover and play a variety of free online games. From action-packed adventures to brain-teasing puzzles, enjoy endless fun on our platform.">
+<meta name="twitter:title" content="Free Online Games - Play Now">
+<meta name="twitter:description"
+    content="Explore a huge collection of free online games for all ages. Play action, puzzle, adventure, and strategy games anytime, anywhere.">
+<meta property="og:url" content="{{ request.build_absolute_uri }}">
+<meta name="twitter:card" content="/static/images/playesports.png">
+<meta property="og:image" content="/static/images/playesports.png">
+<meta name="twitter:image" content="/static/images/playesports.png">
+<title>Free Online Games - Play Action, Puzzle, Adventure & Strategy Games</title>
+{% endblock meta %}
+{% block body %}
+<div class="container mx-auto py-24 px-4">
+    <h1
+        class="text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-br from-blue-700 via-purple-400 via-pink-400 to-blue-300 knewave-regular tracking-widest text-center">
+        Welcome to Playesports</h1>
+    <div class="items-center justify-between bg-black text-white px-6 py-4 hidden md:flex">
+        <div class="flex items-center space-x-2">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-6 w-6 text-purple-500"
+                viewBox="0 0 24 24">
+                <path d="M12 2l9 4.5v9l-9 4.5-9-4.5v-9z" />
+            </svg>
+            <span class="text-sm">4000+ games</span>
+        </div>
+        <div class="flex items-center space-x-2">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-6 w-6 text-purple-500"
+                viewBox="0 0 24 24">
+                <path d="M12 2l9 4.5v9l-9 4.5-9-4.5v-9z" />
+            </svg>
+            <span class="text-sm">No install needed</span>
+        </div>
+        <div class="flex items-center space-x-2">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-6 w-6 text-purple-500"
+                viewBox="0 0 24 24">
+                <path d="M12 2l9 4.5v9l-9 4.5-9-4.5v-9z" />
+            </svg>
+            <span class="text-sm">On any device</span>
+        </div>
+        <div class="flex items-center space-x-2">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-6 w-6 text-purple-500"
+                viewBox="0 0 24 24">
+                <path d="M12 2l9 4.5v9l-9 4.5-9-4.5v-9z" />
+            </svg>
+            <span class="text-sm">Play with friends</span>
+        </div>
+        <div class="flex items-center space-x-2">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-6 w-6 text-purple-500"
+                viewBox="0 0 24 24">
+                <path d="M12 2l9 4.5v9l-9 4.5-9-4.5v-9z" />
+            </svg>
+            <span class="text-sm">All for free</span>
+        </div>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 px-2">
+        {% for game in all_games %}
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <a href="/game/{{game.slug}}">
+                <img src="{{ game.thumbnail }}" alt="{{ game.name }}" class="w-full h-52 object-cover">
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+{% endblock body %}

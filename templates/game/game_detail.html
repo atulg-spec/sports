@@ -1,0 +1,60 @@
+{% extends 'game/base.html' %}
+{% block meta %}
+<meta charset="UTF-8">
+<meta name="theme-color" content="#000000">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="{{ game.description|truncatewords:25 }}">
+<meta name="keywords" content="{{ game.name }}, play {{ game.name }}, online games">
+<meta name="author" content="playesports.in">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="{{ game.name }}">
+<meta property="og:description" content="{{ game.description|truncatewords:30 }}">
+<meta property="og:image" content="/static/images/playesports.png">
+<meta property="og:url" content="{{ request.build_absolute_uri }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ game.name }}">
+<meta name="twitter:description" content="{{ game.description|truncatewords:30 }}">
+<meta name="twitter:image" content="/static/images/playesports.png">
+<title>{{ game.name }} - Play Now</title>
+{% endblock meta %}
+{% block body %}
+<main class="py-24 px-4 md:px-20">
+    <div class="w-full">
+        <div class="w-full md:w-4/5 lg:w-3/4 md:h-[80vh] lg:h-[70vh] h-[30vh] bg-gray-200">
+            <iframe class="w-full h-full" id="game-area" src="{{ game.iframe }}" scrolling="none" frameborder="0" allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+        <div class="container mx-auto px-4 py-5">
+        <div class="flex flex-col lg:flex-row items-start gap-8">
+            <div class="lg:w-2/3 w-full">
+                <h1 class="text-4xl font-bold text-gray-200 mb-4">{{ game.name }}</h1>
+                <h3 class="font-semibold text-2xl">Description</h3>
+                <p class="text-gray-200 text-lg mb-6">{{ game.description }}</p>
+                <p class="text-gray-200 mb-6">
+                    <h3 class="font-semibold text-2xl">Instructions:</h3> {{ game.instructions }}
+                </p>
+            </div>
+        </div>
+        <div class="mt-12">
+            <h3 class="text-xl font-semibold text-gray-200 mb-4">Game Details</h3>
+            <p class="text-gray-200">Created on: <span class="font-medium">{{ game.created_at|date:"Y-m-d" }}</span></p>
+            <p class="text-gray-200">Last Updated: <span class="font-medium">{{ game.updated_at|date:"Y-m-d" }}</span>
+            </p>
+        </div>
+    </div>
+    <h4
+    class="text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-br from-blue-700 via-purple-400 via-pink-400 to-blue-300 knewave-regular tracking-widest text-center">
+    SIMILAR GAMES</h4>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 px-2">
+        {% for game in top_5_games %}
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <a href="/game/{{game.slug}}">
+                <img src="{{ game.thumbnail }}" alt="{{ game.name }}" class="w-full h-52 object-cover">
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</main>
+
+{% endblock body %}
