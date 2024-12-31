@@ -30,16 +30,16 @@
             <div class="lg:w-2/3 w-full">
                 <h1 class="text-4xl font-bold text-gray-200 mb-4">{{ game.name }}</h1>
                 <h3 class="font-semibold text-2xl">Description</h3>
-                <p class="text-gray-200 text-lg mb-6">{{ game.description }}</p>
+                <p class="text-gray-200 text-lg mb-6">{{ game.description|safe }}</p>
                 <p class="text-gray-200 mb-6">
-                    <h3 class="font-semibold text-2xl">Instructions:</h3> {{ game.instructions }}
+                    <h3 class="font-semibold text-2xl">Instructions:</h3> {{ game.instructions|safe }}
                 </p>
             </div>
         </div>
         <div class="mt-12">
             <h3 class="text-xl font-semibold text-gray-200 mb-4">Game Details</h3>
-            <p class="text-gray-200">Created on: <span class="font-medium">{{ game.created_at|date:"Y-m-d" }}</span></p>
-            <p class="text-gray-200">Last Updated: <span class="font-medium">{{ game.updated_at|date:"Y-m-d" }}</span>
+            <p class="font-sm">Created on: <span class="text-sm">{{ game.created_at|date:"Y-m-d" }}</span></p>
+            <p class="font-sm">Last Updated: <span class="font-sm">{{ game.updated_at|date:"Y-m-d" }}</span>
             </p>
         </div>
     </div>
