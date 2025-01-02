@@ -6,6 +6,7 @@ class GameAdmin(admin.ModelAdmin):
     list_display = ('thumbnail_preview' , 'name', 'slug', 'created_at', 'updated_at', 'visit_game_link')
     readonly_fields = ('thumbnail_preview', 'visit_game_link')
     prepopulated_fields = {'slug': ('name',)}
+    search_fields = ('thumbnail' , 'name', 'slug', 'created_at', 'updated_at')
 
     def thumbnail_preview(self, obj):
         if obj.thumbnail:
