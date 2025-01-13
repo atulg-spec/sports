@@ -9,12 +9,12 @@
 <meta name="robots" content="index, follow">
 <meta property="og:title" content="{{ game.name }}">
 <meta property="og:description" content="{{ game.description|truncatewords:30 }}">
-<meta property="og:image" content="/static/images/playesports.png">
+<meta property="og:image" content="{{ game.thumbnail }}">
 <meta property="og:url" content="{{ request.build_absolute_uri }}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ game.name }}">
 <meta name="twitter:description" content="{{ game.description|truncatewords:30 }}">
-<meta name="twitter:image" content="/static/images/playesports.png">
+<meta name="twitter:image" content="{{ game.thumbnail }}">
 <title>{{ game.name }} - Play Now</title>
 {% endblock meta %}
 {% block body %}
