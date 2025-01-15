@@ -23,6 +23,6 @@ urlpatterns = [
     # PAYMENT GATEWAY
     path('payment/', payment_view, name='payment'),
     path('redirect-page/', redirect_page_view, name='redirect_page'),
-
+    path('ads.txt', ads_txt, name='ads.txt'),
 ]
 

@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, HttpResponse
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 import random
@@ -198,3 +198,7 @@ def error_404_view(request, exception):
 
 def error_500_view(request):
     return render(request, 'home/500.html', status=500)
+
+def ads_txt(request):
+    ads_txt_content = """google.com, pub-5564090407790217, DIRECT, f08c47fec0942fa0"""
+    return HttpResponse(ads_txt_content, content_type='text/plain')
