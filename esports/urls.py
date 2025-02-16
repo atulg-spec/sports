@@ -6,6 +6,7 @@ from django.conf.urls.static import static
 from django.conf import settings
 from django.contrib.sitemaps.views import sitemap
 from game.sitemaps import GameSitemap
+from django.views.static import serve
 
 sitemaps = {
     'games': GameSitemap,
@@ -27,5 +28,5 @@ urlpatterns = [
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 # urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 urlpatterns += [
-    path('ads.txt', lambda request: static('ads.txt')(request)),
+    path('ads.txt', lambda request: serve(request, path='ads.txt', document_root=settings.STATIC_ROOT)),
 ]
