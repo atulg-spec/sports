@@ -21,6 +21,7 @@ urlpatterns = [
     path('', include('accounts.urls')),
     path('', include('home.urls')),
     path('game/', include('game.urls')),
+    path('', include('game.urls')),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
